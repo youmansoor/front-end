@@ -1,0 +1,322 @@
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111827;
+    background: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ========================================
+   COMMON
+======================================== */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar {
+    width: 100%;
+    padding: 22px 0;
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: #2563eb;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 15px;
+    font-weight: 500;
+    color: #4b5563;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+.nav-button {
+    padding: 11px 20px;
+    background: #2563eb;
+    color: #ffffff;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    background: #1d4ed8;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    background: #f8faff;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+}
+
+
+/* ========================================
+   HERO CONTENT
+======================================== */
+
+.hero-badge {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 8px 14px;
+    background: #e8f0ff;
+    color: #2563eb;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.08;
+    margin-bottom: 25px;
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #2563eb;
+}
+
+.hero p {
+    max-width: 540px;
+    color: #6b7280;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+}
+
+.btn-secondary {
+    background: white;
+    color: #2563eb;
+    border: 1px solid #dbe3f0;
+}
+
+.btn-secondary:hover {
+    background: #f1f5ff;
+}
+
+
+/* ========================================
+   DASHBOARD CARD
+======================================== */
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+}
+
+.dashboard-card {
+    width: 100%;
+    max-width: 480px;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 25px 60px rgba(37, 99, 235, 0.15);
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.dashboard-chart {
+    height: 220px;
+    display: flex;
+    align-items: end;
+    justify-content: space-around;
+    gap: 15px;
+    padding: 20px;
+    background: #f8faff;
+    border-radius: 12px;
+}
+
+.chart-bar {
+    width: 40px;
+    border-radius: 7px 7px 0 0;
+    background: #2563eb;
+}
+
+.bar-1 {
+    height: 40%;
+}
+
+.bar-2 {
+    height: 60%;
+}
+
+.bar-3 {
+    height: 45%;
+}
+
+.bar-4 {
+    height: 75%;
+}
+
+.bar-5 {
+    height: 65%;
+}
+
+.bar-6 {
+    height: 90%;
+}
+
+.dashboard-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.dashboard-stats div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.dashboard-stats small {
+    color: #9ca3af;
+}
+
+.dashboard-stats strong {
+    font-size: 22px;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        padding: 70px 0;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero-image {
+        margin-top: 20px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .nav-button {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        text-align: center;
+    }
+
+    .dashboard-card {
+        padding: 15px;
+    }
+}
